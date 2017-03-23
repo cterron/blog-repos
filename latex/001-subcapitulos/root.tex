@@ -1,0 +1,40 @@
+% Tipo de documento
+\documentclass[10pt,a4paper]{report}
+% UTF-8 and friends
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{titlesec}
+\usepackage{titletoc}
+\usepackage{hyperref}
+\usepackage{lipsum}
+% Para los capitulos
+\titleformat{\chapter}[display]
+{\bfseries\huge\bfseries\filcenter}{\thechapter}{25pt}{\Large}
+ [%
+  \startcontents
+  \printcontents{}{1}{\setcounter{tocdepth}{3}}%
+  \newpage%
+  ]
+%\renewcommand\cftsubsecpagefont{\color{DarkGreen}}
+\title{Testing subcapítulos}
+\begin{document}
+\maketitle
+\newpage
+\tableofcontents
+\chapter*{Capítulo 1}
+\addcontentsline{toc}{chapter}{Capítulo 1}
+\section*{Sección 1}
+\addcontentsline{toc}{section}{Sección 1}
+\lipsum[1-2]
+\section*{Section 2}
+\addcontentsline{toc}{section}{Sección 2}
+\lipsum[1-2]
+\chapter*{Capítulo 2}
+\addcontentsline{toc}{chapter}{Capítulo 2}
+\section*{Sección 1}
+\addcontentsline{toc}{section}{Sección 1}
+\lipsum[1-2]
+\section*{Sección 2}
+\addcontentsline{toc}{section}{Sección 2}
+\lipsum[1-2]
+\end{document}
